@@ -35,7 +35,6 @@ void App::onSamples()
     double dbfsValue = 20 * std::log10(std::fabs(normalisedValue));
     float level = static_cast<float>(dbfsValue);
     mTui.updateMeter(0, level);
-    //tui.appendGraphData(*maxElement >> 26);
 }
 
 int App::run()
@@ -45,9 +44,6 @@ int App::run()
     AUDIO_MANAGER->configure(48000, mkAudioBufferSize, 1, 1);
     
     mTui.setDevices(AUDIO_MANAGER->enumerateDevices());
-    // spdlog::info("Welcome to spdlog!");
-    // spdlog::error("Some error message with arg: {}", 1);
-    // spdlog::warn("Easy padding in numbers like {:08d}", 12);
 
     auto onRefreshDevicesClick = [this]() { mTui.setDevices(AUDIO_MANAGER->enumerateDevices()); };
     auto onOpen = [this](int deviceIndex, bool open) 

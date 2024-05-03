@@ -16,4 +16,4 @@ target_include_directories(audioio PRIVATE src ${nano_signal_slot_SOURCE_DIR})
 add_subdirectory(src)
 
 # Link libs
-target_link_libraries(audioio PRIVATE PortAudio spdlog::spdlog ftxui::screen ftxui::dom ftxui::component)
+target_link_libraries(audioio PRIVATE PortAudio ftxui::screen ftxui::dom ftxui::component)

@@ -5,7 +5,6 @@ macro(init)
     set(FETCHCONTENT_QUIET OFF)
 
     include(portaudio)
-    include(spdlog)
     include(ftxui)
     include(nanosigslot)
 
